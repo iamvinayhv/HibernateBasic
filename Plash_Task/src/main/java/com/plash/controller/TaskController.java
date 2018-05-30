@@ -20,6 +20,12 @@ public class TaskController {
 	@Autowired
 	private TaskService taskService;
 
+	/**
+	 * @param hotel
+	 * @return
+	 * 
+	 * To add the hotel details
+	 */
 	@RequestMapping(value="addHotel",method=RequestMethod.POST)
 	public @ResponseBody ResponseEntity<String> test(@RequestBody HotelDetails hotel){
 		
@@ -34,6 +40,11 @@ public class TaskController {
 	}
 
 	
+	/**
+	 * @return
+	 * 
+	 * get all the hotel details
+	 */
 	@RequestMapping(value="getDetails",method=RequestMethod.POST)
 	public ResponseEntity<List<HotelDetails>> hotelDetails(){
 		
@@ -47,6 +58,12 @@ public class TaskController {
 		
 	}
 	
+	/**
+	 * @param hotel
+	 * @return
+	 * 
+	 * update details of hotel
+	 */
 	@RequestMapping(value="update",method=RequestMethod.POST)
 	public ResponseEntity<String> updateHotel(@RequestBody HotelDetails hotel){
 		try{
@@ -58,6 +75,12 @@ public class TaskController {
 		
 	}
 	
+	/**
+	 * @param hotel
+	 * @return
+	 * 
+	 * Delete hotel details
+	 */
 	@RequestMapping(value="delete",method=RequestMethod.POST)
 	public ResponseEntity<String> deleteHotel(@RequestBody HotelDetails hotel){
 		try{
